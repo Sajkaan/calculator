@@ -1,9 +1,9 @@
 package com.teamtreehouse;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
     private Calculator calc;
@@ -41,5 +41,9 @@ public class CalculatorTest {
         assertEquals(3, result);
     }
 
-
+    @Test
+    public void floatingPointDivisionWorks() throws Exception {
+        float result = calc.divide(7,2);
+        assertEquals(3.5, result, 0);
+    }
 }
